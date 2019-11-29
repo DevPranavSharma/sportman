@@ -1,0 +1,14 @@
+.card-header{
+    background-color: blue;
+}
+.card{
+    width: 70%;
+    height: 450px;
+}
+.demo{
+    width: 40%;
+}
+.main{
+    background-color: #e6f7ff;
+    height: 1000px;
+}
