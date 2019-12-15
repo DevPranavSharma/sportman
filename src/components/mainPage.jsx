@@ -3,6 +3,7 @@ import 'bootstrap/dist/css/bootstrap.css';
 import Content from './content';
 import Login from './login';
 import {Route} from 'react-router-dom';
+import Signup from './signup';
 
 
 class MainPage extends Component{
@@ -16,6 +17,9 @@ class MainPage extends Component{
 
                  <Route exact path="/login" render={()=>(
                     <Login/>
+                )}/>
+                 <Route exact path="/signup" render={()=>(
+                    <Signup/>
                 )}/>
             </div>
         )
