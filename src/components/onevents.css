@@ -1,0 +1,22 @@
+.background2 {
+    height: 600px;
+    background: url(https://i.pinimg.com/736x/7c/e8/29/7ce8299fde2eb91f87a71dd1673126a2.jpg) ;
+    border: 1px solid black;
+    background-repeat:no-repeat;
+    background-size:cover ;
+  }
+   
+  .transbox {
+    margin: 50px;
+    background-color: #ffffff;
+    border: 1px solid black;
+    opacity: 0.6;
+    filter: alpha(opacity=60); 
+  }
+   
+  .transbox p {
+    margin: 2%;
+    font-weight: bold;
+    font-size: 50px;
+    color: #000000;
+  }
