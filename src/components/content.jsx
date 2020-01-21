@@ -12,7 +12,7 @@ class Content extends Component{
                 <Navbar/>
                 <div className="background">
                     <div className="transbox">
-                    <center> <p>Sports Events</p></center> 
+                    <p className="n">You are in Chitkara University looking for Sports events happening All Time.</p> 
                     </div>
                 </div>
                 <Onevents/>

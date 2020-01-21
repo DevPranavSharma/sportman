@@ -2,6 +2,8 @@ import React,{Component} from 'react';
 import './login.css';
 import 'bootstrap/dist/css/bootstrap.css';
 import Navbar from './navbar';
+import {Link} from 'react-router-dom';
+
 
 class Signup extends Component{
     render(){
@@ -28,15 +30,11 @@ class Signup extends Component{
    
   </div>
   <div class="md-form">
-      <input type="text" id="materialLoginFormText" class="form-control" placeholder="Enter your first name here" />
-      <label for="materialLoginFormText"></label>
-    </div>
-    <div class="md-form">
-      <input type="text" id="materialLoginFormText" class="form-control" placeholder="Enter your last name here" />
+      <input type="text" id="materialLoginFormText" class="form-control" placeholder="Full name" />
       <label for="materialLoginFormText"></label>
     </div>
     <div>
-    <input type="email" class="form-control" id="materialLoginFormEmail" aria-describedby="emailHelp" placeholder="Enter email"/>
+    <input type="email" class="form-control" id="materialLoginFormEmail" aria-describedby="emailHelp" placeholder="Email address"/>
   </div>
   <br/>
    
@@ -44,22 +42,20 @@ class Signup extends Component{
       <input type="password" id="materialLoginFormPassword" class="form-control" placeholder="Password" />
       <label for="materialLoginFormPassword"></label>
     </div>
+
+    <div>
+    <input type="number" class="form-control" id="materialLoginFormEmail" aria-describedby="emailHelp" placeholder="Mobile Number"/>
+  </div>
      
     
-    <div class="radio">
-  <label><input type="radio" name="optradio" checked/>Student</label>
-</div>
-<div class="radio">
-  <label><input type="radio" name="optradio"/>Faculty</label>
-</div>    
-
-
+   
+<br></br>
     <div class="d-flex justify-content-around">
       <div>
       
         <div class="form-check">
           <input type="checkbox" class="form-check-input" id="materialLoginFormRemember" />
-          <label class="form-check-label" for="materialLoginFormRemember">I have agreed to the terms and conditions</label>
+          <label class="form-check-label" for="materialLoginFormRemember">By signing up, I agree to MeraEvents Privacy Policy</label>
         </div>
       </div>
       <div>
@@ -68,9 +64,9 @@ class Signup extends Component{
     </div>
 
    
-    <button class="btn btn-primary btn-rounded btn-block my-4 waves-effect z-depth-0" type="submit">Sign in</button>
+    <button class="btn btn-primary btn-rounded btn-block my-4 waves-effect z-depth-0" type="submit">Sign Up</button>
 
-    
+    <Link to="login" >Already Registered? Log in</Link>
 
 
   </form>

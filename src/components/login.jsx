@@ -4,6 +4,7 @@ import 'bootstrap/dist/css/bootstrap.css';
 import Navbar from './navbar';
 import {Link} from 'react-router-dom';
 
+
 class Login extends Component{
     render(){
         return (
@@ -14,7 +15,7 @@ class Login extends Component{
                 <div class="card">
 
 <h5 class="card-header info-color white-text text-center py-4">
-  <strong>Sign in</strong>
+  <strong>Happy to see you return</strong>
 </h5>
 
 
@@ -53,7 +54,7 @@ class Login extends Component{
     <button class="btn btn-primary btn-rounded btn-block my-4 waves-effect z-depth-0" type="submit">Sign in</button>
 
     
-      <Link to="signup" >Not a member?</Link>
+      <Link to="signup" >New to MeraEvents? Sign Up</Link>
 
 
 

@@ -17,15 +17,29 @@ class Onevents extends Component{
             <React.Fragment>
         
                 <div className="background2">
-                    <div className="transbox">
-                    <center> <h3>Events List</h3>
-                             <p><ul>
-                                <li>Cricket match <button onClick={this.register} class="btn btn-primary"> Register </button></li>
-                                <li>Football Tournament  <button class="btn btn-primary" onClick={this.register}> Register </button></li>
-                                <li>Badminton Tournament  <button class="btn btn-primary" onClick={this.register} > Register </button></li> 
-                                 
-                                 </ul></p>
-                    </center> 
+                    <div>
+                     <h3>Upcoming Events</h3>
+                     <br></br>
+                     <div class="container">
+                         <div class="row">
+                            <div class="col-sm">
+                            <div class="card" style={{width: "18rem"}}>
+  <img class="card-img-top" src="..." alt="Card image cap"/>
+  <div class="card-body">
+    <h5 class="card-title">Card title</h5>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <a href="#" class="btn btn-primary">Go somewhere</a>
+  </div>
+                            </div>
+                                 </div>
+                        <div class="col-sm">
+                            One of three columns
+                        </div>
+                         <div class="col-sm">
+                             One of three columns
+                         </div>
+                         </div>
+                    </div>
                     </div>
                 </div>
                 

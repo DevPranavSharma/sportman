@@ -1,9 +1,10 @@
 import React,{Component} from 'react';
-import 'bootstrap/dist/css/bootstrap.css';
+
 import Content from './content';
 import Login from './login';
 import {Route} from 'react-router-dom';
 import Signup from './signup';
+import AddEvent from './addevent'; 
 
 
 class MainPage extends Component{
@@ -20,6 +21,9 @@ class MainPage extends Component{
                 )}/>
                  <Route exact path="/signup" render={()=>(
                     <Signup/>
+                )}/>
+                <Route exact path="/addevent" render={()=>(
+                    <AddEvent/>
                 )}/>
             </div>
         )
