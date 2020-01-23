@@ -1,66 +1,56 @@
 import React,{Component} from 'react';
 import 'bootstrap/dist/css/bootstrap.css';
 import './onevents.css';
+import axios from 'axios';
 //just a change to see 
+import Display from './display'
 
 class Onevents extends Component{
     constructor(){
-        super()
-        this.register = this.register.bind(this)
+        super();
+        //this.state.event = this.state.bind(this);
+        this.state={
+            event : []
+        }
+        this.register = this.register.bind(this);
+        
     }
     register(){
         alert('you have successfully registered for this event')
      }
-     
+     componentDidMount() {
+        axios.get('http://localhost:5006/events/')
+          .then(response => {
+            if (response.data.length > 0) {
+              
+            console.log(response.data);
+            //console.log("this is event "+response.data[0].eventitle);
+            this.setState({
+              //event: response.data.map(events => events.eventitle)
+              event: response.data
+             
+            });
+            }
+          })
+          .catch((error) => {
+            console.log(error);
+            
+          })
+    
+      }
+      
+    //  eventList= this.state.event.map(event=>{
+    //      return(
+    //      <p>{event}</p>
+    //      )
+     //})
     render(){
         return(
-            <React.Fragment>
+            <div>
         
-                <div className="background2">
-                    <div>
-                     <h3>Upcoming Events</h3>
-                     <br></br>
-                     <div className="container">
-                         <div className="row">
-                            <div className="col-sm">
-                            <div className="card" style={{width: "18rem"}}>
-  <img className="card-img-top" src="..." alt="a good"/>
-  <div className="card-body">
-    <h5 className="card-title">Card title</h5>
-    <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-    <a href="/" className="btn btn-primary">Go somewhere</a>
-  </div>
-                            </div>
-                                 </div>
-                        <div className="col-sm">
-                        <div className="card" style={{width: "18rem"}}>
-  <img className="card-img-top" src="..." alt="cardd imze"/>
-  <div className="card-body">
-    <h5 className="card-title">Card title</h5>
-    <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-    <a href="/" className="btn btn-primary">Go somewhere</a>
-  </div>
-                            </div>
-                        </div>
-                         <div className="col-sm">
-                         <div className="card" style={{width: "18rem"}}>
-  <img className="card-img-top" src="..." alt="Carrd imaz"/>
-  <div className="card-body">
-    <h5 className="card-title">Card title</h5>
-    <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-    <a href="/" className="btn btn-primary">Go somewhere</a>
-  </div>
-                            </div>
-                         </div>
-                         </div>
-                    </div>
-                    </div>
-                </div>
-                
-
-
-               
-            </React.Fragment>
+               <h1>Ongoing events</h1>
+               <Display arr={this.state.event}/>
+               </div>
         )
        
     }
