@@ -1,5 +1,5 @@
 .background2 {
-    height: 600px;
+    
    
    /* border: 1px solid black;
     */background-repeat:no-repeat;
@@ -25,4 +25,8 @@
     font-weight: bold;
     font-size:35px;
     color: #000000;
+  }
+  .card{
+    margin:2%;
+    padding:1%;
   }

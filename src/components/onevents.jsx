@@ -20,23 +20,37 @@ class Onevents extends Component{
                     <div>
                      <h3>Upcoming Events</h3>
                      <br></br>
-                     <div class="container">
-                         <div class="row">
-                            <div class="col-sm">
-                            <div class="card" style={{width: "18rem"}}>
-  <img class="card-img-top" src="..." alt="Card image cap"/>
-  <div class="card-body">
-    <h5 class="card-title">Card title</h5>
-    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-    <a href="#" class="btn btn-primary">Go somewhere</a>
+                     <div className="container">
+                         <div className="row">
+                            <div className="col-sm">
+                            <div className="card" style={{width: "18rem"}}>
+  <img className="card-img-top" src="..." alt="a good"/>
+  <div className="card-body">
+    <h5 className="card-title">Card title</h5>
+    <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <a href="/" className="btn btn-primary">Go somewhere</a>
   </div>
                             </div>
                                  </div>
-                        <div class="col-sm">
-                            One of three columns
+                        <div className="col-sm">
+                        <div className="card" style={{width: "18rem"}}>
+  <img className="card-img-top" src="..." alt="cardd imze"/>
+  <div className="card-body">
+    <h5 className="card-title">Card title</h5>
+    <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <a href="/" className="btn btn-primary">Go somewhere</a>
+  </div>
+                            </div>
                         </div>
-                         <div class="col-sm">
-                             One of three columns
+                         <div className="col-sm">
+                         <div className="card" style={{width: "18rem"}}>
+  <img className="card-img-top" src="..." alt="Carrd imaz"/>
+  <div className="card-body">
+    <h5 className="card-title">Card title</h5>
+    <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <a href="/" className="btn btn-primary">Go somewhere</a>
+  </div>
+                            </div>
                          </div>
                          </div>
                     </div>

@@ -1,5 +1,5 @@
 .background {
-    height: 100px;
+    
    /* background: url(https://i.pinimg.com/736x/7c/e8/29/7ce8299fde2eb91f87a71dd1673126a2.jpg) ;
     border: 1px solid black;
     */background-repeat:no-repeat;
@@ -7,7 +7,10 @@
    /* background-image:linear-gradient(to right,red,blue);
     */
   }
-   
+   .cu{
+     margin: 5px;
+     padding: 5px;
+   }
   .transbox {
     margin: 50px;
     background-color: #ffffff;

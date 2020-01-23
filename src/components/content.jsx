@@ -11,11 +11,13 @@ class Content extends Component{
             <React.Fragment>
                 <Navbar/>
                 <div className="background">
-                    <div className="transbox">
+                    <div className="transbox container-fluid cu">
                     <p className="n">You are in Chitkara University looking for Sports events happening All Time.</p> 
                     </div>
                 </div>
+                <div className="container-fluid">
                 <Onevents/>
+                </div>
 
 
                

@@ -14,34 +14,34 @@ class Login extends Component{
                 <center>
                 <div class="card">
 
-<h5 class="card-header info-color white-text text-center py-4">
+<h5 className="card-header info-color white-text text-center py-4">
   <strong>Happy to see you return</strong>
 </h5>
 
 
-<div class=" col card-body  px-lg-5 pt-0">
+<div className=" col card-body  px-lg-5 pt-0">
 <center>
-  <div class="demo">
-  <form class="text-center" action="#!">
+  <div className="demo">
+  <form className="text-center" action="#!">
   <br/>
    
-  <div class="form-group">
+  <div className="form-group">
     <label for="inputlg"></label>
-    <input class="form-control input-lg" id="inputlg" type="text" placeholder="Email" />
+    <input className="form-control input-lg" id="inputlg" type="text" placeholder="Username" />
   </div>
 
    
-    <div class="md-form">
+    <div className="md-form">
       <input type="password" id="materialLoginFormPassword" class="form-control" placeholder="Password" />
       <label for="materialLoginFormPassword"></label>
     </div>
 
-    <div class="d-flex justify-content-around">
+    <div className="d-flex justify-content-around">
       <div>
       
-        <div class="form-check">
+        <div className="form-check">
           <input type="checkbox" class="form-check-input" id="materialLoginFormRemember" />
-          <label class="form-check-label" for="materialLoginFormRemember">Remember me</label>
+          <label className="form-check-label" for="materialLoginFormRemember">Remember me</label>
         </div>
       </div>
       <div>
@@ -51,7 +51,7 @@ class Login extends Component{
     </div>
 
    
-    <button class="btn btn-primary btn-rounded btn-block my-4 waves-effect z-depth-0" type="submit">Sign in</button>
+    <button className="btn btn-primary btn-rounded btn-block my-4 waves-effect z-depth-0" type="submit">Sign in</button>
 
     
       <Link to="signup" >New to MeraEvents? Sign Up</Link>

@@ -16,8 +16,8 @@ class Navbar extends Component{
     <Link to="/">  <img src={mElogo} alt="pic" width="50px" height="50px"></img></Link>
     </div>
     <div className="nav navbar-right">
-    <Link to="login" class="btn btn-primary" style={{marginRight: "16px"}} >Login</Link>
-    <Link to="login" class="btn btn-primary">CREATE EVENT</Link>
+    <Link to="login" className="btn btn-primary" style={{marginRight: "16px"}} >Login</Link>
+    <Link to="login" className="btn btn-primary">CREATE EVENT</Link>
        
     </div>
   </div>
