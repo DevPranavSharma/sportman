@@ -47,8 +47,8 @@ class Onevents extends Component{
     render(){
         return(
             <div>
-        
-               <h1>Ongoing events</h1>
+               
+               <p className="transbox"> Upcoming Events</p>
                <Display arr={this.state.event}/>
                </div>
         )

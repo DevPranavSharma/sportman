@@ -61,15 +61,8 @@ class AddEvent extends Component{
         }
         console.log(event);
         axios.post('http://localhost:5006/events/add',event).then(res=>console.log(res.data));
-        this.setState={
-            eventtitle : '',
-            eventvenue : '',
-            starttime: new Date(),
-            endttime: new Date(),
-            totalseats : 0,
-            participants : [],
-
-        }
+        setTimeout(function(){window.location ='/';}, 1000);
+        
 
     }
     render(){

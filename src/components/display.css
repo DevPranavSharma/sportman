@@ -1,10 +1,13 @@
 .card{
-    max-width: 33%;
-    height:50 px ;
-    height: 5%;
+  max-width: 33%;
+  height:50 px ;
+  height: 5%;
 }
 .card-body{
-    max-width: 33%;
-    height:50 px ;
-    height: 5%;
+  max-width: 33%;
+  height:50 px ;
+  height: 5%;
+}
+.card-title{
+  
 }

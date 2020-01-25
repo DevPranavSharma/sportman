@@ -18,6 +18,7 @@
     */opacity: 0.6;
     filter: alpha(opacity=60); 
     font-family:'Times New Roman', Times, serif;
+    font-size: 40px;
   }
    
   .transbox p {
