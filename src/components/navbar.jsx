@@ -17,7 +17,7 @@ class Navbar extends Component{
     </div>
     <div className="nav navbar-right">
     <Link to="login" className="btn btn-primary" style={{marginRight: "16px"}} >Login</Link>
-    <Link to="login" className="btn btn-primary">CREATE EVENT</Link>
+    <Link to="addevent" className="btn btn-primary">CREATE EVENT</Link>
        
     </div>
   </div>

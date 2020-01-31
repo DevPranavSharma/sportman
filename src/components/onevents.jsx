@@ -6,8 +6,8 @@ import axios from 'axios';
 import Display from './display'
 
 class Onevents extends Component{
-    constructor(){
-        super();
+    constructor(props){
+        super(props);
         //this.state.event = this.state.bind(this);
         this.state={
             event : []
