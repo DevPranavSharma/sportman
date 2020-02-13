@@ -6,6 +6,8 @@ import {BrowserRouter as Router , Switch ,  Route, Redirect} from 'react-router-
 import Signup from './signup';
 import AddEvent from './addevent'; 
 import EventDetails from './eventdetails';
+import Default from './default';
+import AdminPage from './adminpage';
 
 
 class MainPage extends Component{
@@ -21,7 +23,7 @@ class MainPage extends Component{
         return(
            <Router>
                <Switch>
-            <div className="container-fluid">
+            
                  <Route exact path="/" render={()=>(
                         <Content/>  
                 )}/>
@@ -36,8 +38,8 @@ class MainPage extends Component{
                     <AddEvent/>
                 )}/>
                 <Route  path="/events/details/:id"  component={EventDetails}/>
-                
-            </div>
+                <Route  exact path="/adminpage"  component={AdminPage}/>
+                <Route exact strict  component={Default}/>
             </Switch>
             </Router>
         )

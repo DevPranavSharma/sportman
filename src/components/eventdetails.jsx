@@ -2,6 +2,7 @@ import React,{Component} from 'react';
 import 'bootstrap/dist/css/bootstrap.css';
 import Navbar from './navbar';
 import Axios from 'axios';
+import {Link} from 'react-router-dom';
 
 
 class EventDetails extends Component{
@@ -22,10 +23,10 @@ class EventDetails extends Component{
     }
     handleRegistration = ()=>{
         var pararr= this.state.event.participants;
-        if(pararr.length==this.state.event.totalseats){
+        if(pararr.length===this.state.event.totalseats){
             alert('No seats left');
         }
-        else if(pararr.indexOf(this.state.username)!=-1){
+        else if(pararr.indexOf(this.state.username)!==-1){
             alert('You have already registered')
         }
         else{
@@ -86,10 +87,11 @@ class EventDetails extends Component{
     
     render(){
         return(
-            <div>
+            <React.Fragment>
          <Navbar/>
           {/* <button onClick={alert('hello')}>Click for local storage</button>  */}
           {/* <button onClick={() => this.handleclick()}>hello</button> */}
+          <div>
         <h1 className="display-2">{this.state.event.eventtitle}</h1>
         <h4 className="card-subtitle mb-2 text-muted">{this.state.event.eventvenue}</h4>
         <p className="card-text">Remaining Seats {(this.state.event.totalseats) - (this.state.participant.length)}</p>
@@ -97,6 +99,7 @@ class EventDetails extends Component{
         <p className="card-text">{this.formatDate(this.state.event.endtime)}</p>
         <div className="btn btn-primary" onClick={this.handleRegistration}>Register</div>
          </div>
+         </React.Fragment>
         )
         
        

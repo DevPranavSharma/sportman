@@ -5,7 +5,7 @@ import './onevents.css';
 import './display.css';
 
 
-class Display extends Component{
+class AdminDisplay extends Component{
     constructor(props){
         super(props)
         this.formatDate=this.formatDate.bind(this);
@@ -16,16 +16,13 @@ class Display extends Component{
         return new Date(string).toLocaleDateString([],options);
     }
     render(){
-
         return(
-        
+
         <div className="background2">
         <div className="row">
             {
                 
-                
                 this.props.arr.map((val)=>{
-                    if(val.approved){
                     return <div className="card " >
                     <div className="card-body ">
                               <h5 className="card-title">{val.eventtitle}</h5>
@@ -34,13 +31,12 @@ class Display extends Component{
                               <p className="card-text">{this.formatDate(val.starttime)}</p>
                              
                               
-
                      
                               <Link to={`events/details/${val._id}`} className="card-link">Register</Link>
                     </div>
                   </div>
                   
-                }})
+                })
             }
             </div>
             </div>
@@ -51,4 +47,4 @@ class Display extends Component{
 
 }
 
-export default Display;
+export default AdminDisplay;

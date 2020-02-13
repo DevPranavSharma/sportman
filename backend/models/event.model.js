@@ -8,6 +8,7 @@ const eventSchema = new Schema({
   starttime: { type: Date, required: true },
   endtime:{ type: Date, required: true},
   totalseats: { type: Number, required: true },
+  approved: {type: Boolean, default: false},
   participants:[{type:String}]
 }, {
   timestamps: true,

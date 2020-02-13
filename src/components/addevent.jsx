@@ -70,7 +70,7 @@ class AddEvent extends Component{
     }
     render(){
         return (
-           <div>
+            <div>
             <div className='bg'>
                  <Navbar/>
                  <br/>

@@ -93,4 +93,24 @@ router.route('/update/:id').post((req, res) => {
 });
 
 
+router.route('/approve/:id').post((req, res) => {
+  console.log(req.body);
+  Event.findById(req.params.id)
+    .then(event => {
+  //     event.eventtitle = "hhhhhhh";
+  // event.eventvenue = req.eventvenue;
+  // event.starttime = Date.parse(req.body.startdate);
+  // event.endtime =  Date.parse(req.body.enddate);
+  // event.totalseats = Number(req.body.totalseats);
+  event.approved = true;
+  
+      event.save()
+        .then(() => res.json('Event updated!'+     console.log(event)
+        ))
+        .catch(err => res.status(400).json('Error: ' + err));
+  })
+    .catch(err => res.status(400).json('Error: ' + err));
+});
+
+
 module.exports = router;

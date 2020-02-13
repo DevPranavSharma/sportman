@@ -40,7 +40,7 @@ class Login extends Component{
 
    onSubmit(e){
     e.preventDefault();
-    if(this.state.username.length===0|| this.state.password.length===0||this.state.college_id==0){
+    if(this.state.username.length===0|| this.state.password.length===0||this.state.college_id===0){
       alert('Please enter the values');
   }
   else{

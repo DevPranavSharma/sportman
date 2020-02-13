@@ -8,7 +8,6 @@ import Display from './display'
 class Onevents extends Component{
     constructor(props){
         super(props);
-        //this.state.event = this.state.bind(this);
         this.state={
             event : []
         }
@@ -24,9 +23,7 @@ class Onevents extends Component{
             if (response.data.length > 0) {
               
             console.log(response.data);
-            //console.log("this is event "+response.data[0].eventitle);
             this.setState({
-              //event: response.data.map(events => events.eventitle)
               event: response.data
              
             });
@@ -39,11 +36,6 @@ class Onevents extends Component{
     
       }
       
-    //  eventList= this.state.event.map(event=>{
-    //      return(
-    //      <p>{event}</p>
-    //      )
-     //})
     render(){
         return(
             <div>
