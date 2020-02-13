@@ -15,4 +15,17 @@ const eventSchema = new Schema({
 
 const Event = mongoose.model('Event', eventSchema);
 
+
+Event.checkVenue = function (req, callBack) {
+  let venue = req.body.eventvenue;
+  let query = {};
+
+  query = { eventvenue: venue }
+  
+  Event.find(query, callBack);
+}
+
+
+
+
 module.exports = Event;

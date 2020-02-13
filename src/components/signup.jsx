@@ -37,17 +37,38 @@ onIdChange(e){
 }
 onSubmit(e){
   e.preventDefault();
-  const user={
-      username : this.state.username,
-      password : this.state.password,
-      college_id: this.state.college_id,
-     }
-  axios.post('http://localhost:5006/users/add',user).then(res=>console.log(res.data));   
-  
-  console.log(user);
-  //axios.post('http://localhost:5006/users/add',user).then(res=>console.log(res.data));
-  setTimeout(function(){window.location ='/';}, 1000);
+     if(this.state.username.length===0|| this.state.password.length===0){
+      alert('Please enter the values');
   }
+  else{
+  const user ={
+    username : this.state.username,
+    password : this.state.password,
+    college_id: this.state.college_id,
+  }
+  axios.post('http://localhost:5006/users/register',user)
+  .then(res=>{
+      console.log(res.data);
+      if(res.data.error){
+          this.setState({
+              err:res.data.error
+          })
+          localStorage.removeItem('user');
+      }else{
+          this.setState({
+              user:res.data
+          })
+
+          localStorage.setItem('userdata',JSON.stringify(user));
+          setTimeout(function(){window.location ='/';}, 1000);
+              
+          
+      }
+
+  
+  })
+}
+}
 
 
     render(){
@@ -73,16 +94,16 @@ onSubmit(e){
    
   </div>
   <div className="md-form">
-      <input type="text" id="materialLoginFormText" onChange={this.onUserChange} className="form-control" placeholder="Username" />
+      <input type="text" id="materialLoginFormText" onChange={this.onUserChange} className="form-control" required placeholder="Username" />
       <label for="materialLoginFormText"></label>
     </div>
     <div>
-    <input type="number" className="form-control" onChange={this.onIdChange} id="materialLoginFormEmail" aria-describedby="emailHelp" placeholder="College ID"/>
+    <input type="number" className="form-control" onChange={this.onIdChange} id="materialLoginFormEmail" required aria-describedby="emailHelp" placeholder="College ID"/>
   </div>
   <br/>
    
     <div className="md-form">
-      <input type="password" id="materialLoginFormPassword" onChange={this.onPassChange} className="form-control" placeholder="Password" />
+      <input type="password" id="materialLoginFormPassword" onChange={this.onPassChange} className="form-control" required placeholder="Password" />
       <label for="materialLoginFormPassword"></label>
     </div>
 

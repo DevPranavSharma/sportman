@@ -60,7 +60,10 @@ class AddEvent extends Component{
                          
         }
         console.log(event);
-        axios.post('http://localhost:5006/events/add',event).then(res=>console.log(res.data));
+        axios.post('http://localhost:5006/events/add',event).then(res=>console.log(res.data))
+        .catch(err=>{
+            alert("Another event exists at this time at this venue")
+        });
         setTimeout(function(){window.location ='/';}, 1000);
         
 

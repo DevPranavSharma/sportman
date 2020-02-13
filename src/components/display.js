@@ -23,8 +23,8 @@ class Display extends Component{
             {
                 
                 this.props.arr.map((val)=>{
-                    return <div className="card" >
-                    <div className="card-body">
+                    return <div className="card " >
+                    <div className="card-body ">
                               <h5 className="card-title">{val.eventtitle}</h5>
                               <h6 className="card-subtitle mb-2 text-muted">{val.eventvenue}</h6>
                               <p className="card-text">Remaining Seats {val.totalseats}</p>
@@ -32,7 +32,7 @@ class Display extends Component{
                              
                               
                      
-                              <Link to={`events/details/${val ._id}`} className="card-link">Register</Link>
+                              <Link to={`events/details/${val._id}`} className="card-link">Register</Link>
                     </div>
                   </div>
                   
