@@ -1,6 +1,7 @@
 {
   "name": "sportman",
   "version": "0.1.0",
+  "author" : "Pranav Sharma",
   "private": true,
   "dependencies": {
     "react": "^16.12.0",
